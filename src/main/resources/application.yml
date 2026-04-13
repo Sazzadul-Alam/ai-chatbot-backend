@@ -1,0 +1,81 @@
+app:
+  name: "Tracks"
+  url: "http://localhost:4200/"
+server:
+  port: 8083
+  tomcat:
+    basedir: "../tracks-logs/access-logs"
+    accesslog:
+      enabled: true
+      buffered: true
+      pattern: "%{yyyy-MM-dd HH:mm:ss}t %h %l %u \"%r\" %s %b %T %X %S %q"
+      file-date-format: .yyyy-MM-dd
+      prefix: access_log
+      suffix: .log
+logging:
+  level:
+    org:
+      apache:
+        tomcat: OFF
+        catalina: OFF
+jwt:
+  http:
+    request:
+      header: Authorization
+  signing:
+    key:
+      secret: 5K2MYx$ni63Z
+  token:
+    expiration:
+      in:
+        seconds: 9999999
+  refresh:
+    token:
+      expiration:
+        in:
+          seconds: 9999999
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.14.136:27017/isage
+      database: isage
+  main:
+    allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "accfintax.tracks@gmail.com"
+    password: "fvyciqztqtxkxlyz"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+      protocol: smtp
+      test-connection: false
+
+
+ip:
+  address: "*"
+
+otp:
+  generation:
+    time: 60 # in minutes
+
+report:
+  baseDir: "/reports/"
+  invoice:
+    file: "/reports/invoice/invoice.jasper"
+    file-v2: "/reports/invoice/invoice_v2.jasper"
+    images: "/reports/invoice/"
+
+sftp:
+  host: 192.168.1.252
+  username: masum
+  password: aaaaa@
+  files_path: "../Files"

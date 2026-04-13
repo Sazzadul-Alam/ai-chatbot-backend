@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub_report" pageWidth="672" pageHeight="595" orientation="Landscape" columnWidth="672" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="f6f7e9a9-eff7-4535-bfc5-18f07c3edeb2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="net.sf.jasperreports.default.font.name" value="Sans Serif"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.export.pdf.force.linebreak.policy" value="true"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="subtotal" class="java.lang.String"/>
+	<field name="vat" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<detail>
+		<band height="22">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="100" y="0" width="100" height="22" uuid="d4180af6-94db-408b-bf16-22dfbd1bf3a6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fe4f292-41c7-4b3a-8598-4a24ae34e3d5"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#A1A1A1"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="320" y="0" width="120" height="22" uuid="e7a6e3bc-7534-47e3-a83f-f2cd2999c2cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fe4f292-41c7-4b3a-8598-4a24ae34e3d5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#A1A1A1"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="200" y="0" width="120" height="22" uuid="4052e40e-bc4d-4209-9977-e28819aa5b02">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fe4f292-41c7-4b3a-8598-4a24ae34e3d5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#A1A1A1"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="440" y="0" width="120" height="22" uuid="03e0499f-e9a9-4dc2-a8db-be6e0077d0fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fe4f292-41c7-4b3a-8598-4a24ae34e3d5"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#A1A1A1"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="100" height="22" uuid="0434dc8c-74df-4680-8f5b-05dee049340d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9fe4f292-41c7-4b3a-8598-4a24ae34e3d5"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="net.sf.jasperreports.export.xls.wrap.text" value="true"/>
+				</reportElement>
+				<box padding="2">
+					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#A1A1A1"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
