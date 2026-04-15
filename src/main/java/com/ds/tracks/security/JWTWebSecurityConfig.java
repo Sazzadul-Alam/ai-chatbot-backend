@@ -72,7 +72,7 @@ public class JWTWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity webSecurity) {
         webSecurity.ignoring()
-                .antMatchers("/user/register", "/user/forget-password", "/user/reset-password","/user/activate","/user/resetPassword/**","/isage/country-code")
+                .antMatchers("/user/register", "/user/forget-password", "/user/reset-password","/user/activate","/user/resetPassword/**","/isage/country-code","/user/otp/reset")
                 .antMatchers( "/authenticate", "/logout")
                 .antMatchers(OPTIONS, "/**")
                 .antMatchers("/actuator/**", "/ws/**")
