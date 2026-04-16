@@ -12,4 +12,5 @@ public class CountryCode {
     private String country;
     private String countryCode;
     private String isoCodes;
+    private String phoneNumberLimit;
 }

@@ -162,7 +162,7 @@ public class UserServiceImpl implements UserService {
             Date otpValidationDate = Utils.addHoursToJavaUtilDate(new Date(), otpGenerationTime);
             UpdateResult updateResult = userDao.otpReset(loginId, otp, otpValidationDate);
             if (updateResult.getModifiedCount() > 0) {
-                emailService.sendEmail(loginId, "OTP Reset Notification", "System Generated OTP is" + otp + ". It will be Expired within " + otpGenerationTime + " minutes.");
+                emailService.sendEmail(loginId, "OTP Verification Code – Resent", "Welcome to iSAGE, \n Your OTP is " + otp);
                 return new ResponseEntity<>(new Response(200, "New otp is generated. It will be expired within " + otpGenerationTime + " minutes."), HttpStatus.OK);
             } else {
                 log.info("New otp is not generated.");
@@ -238,7 +238,7 @@ public class UserServiceImpl implements UserService {
                             .otpValidationTime(Utils.addHoursToJavaUtilDate(new Date(), otpGenerationTime))
                             .status(UserStatus.NEW)
                             .build());
-            emailService.sendEmail(email.trim(), "User Notification", "Welcome to iSAGE, \n Your OTP is " + otp);
+            emailService.sendEmail(email.trim(), "OTP Verification Code", "Welcome to iSAGE, \n Your OTP is " + otp);
             return new ResponseEntity<>("Otp Sent", HttpStatus.OK);
         } catch (org.springframework.dao.DuplicateKeyException duplicateKeyException) {
             return new ResponseEntity<>("Email already exists", HttpStatus.CONFLICT);
